@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* Background */
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.75)),
+    url(images/background.jpg);
+  background-size: cover;
+  background-position: center top;
+}
+
+/* Navbar */
+nav {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 30px 0;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 25px;
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ededed;
+  text-transform: uppercase;
+}
+
+nav ul li a::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #bb9362;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.logo {
+  width: 350px;
+  cursor: pointer;
+}
+
+/* Main */
+main {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #ededed;
+}
+
+main h1 {
+  margin-top: 70px;
+  font-size: 70px;
+}
+
+main p {
+  margin: 20px auto;
+  font-weight: 100;
+  line-height: 25px;
+}
+
+button {
+  width: 200px;
+  margin: 20px 10px;
+  padding: 15px 0;
+  border: 2px solid #ededed;
+  border-radius: 25px;
+  background-color: transparent;
+  text-align: center;
+  font-weight: bold;
+  color: #ededed;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+span {
+  background-color: #9e5046;
+  height: 100%;
+  width: 0;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+button:hover {
+  border: none;
+}
+
+button:hover span {
+  width: 100%;
+}
+
+/* Footer */
+footer {
+  font-size: 14px;
+  position: absolute;
+  bottom: 15px;
+  right: 10px;
+  color: #ededed;
+}
